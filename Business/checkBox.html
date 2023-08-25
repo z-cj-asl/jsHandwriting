@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+    <input type="checkbox"/>
+    <button>全选</button>
+    <button>取消全选</button>
+
+    <script>
+        let checkboxs = document.querySelectorAll('input')
+        let buttons = document.querySelectorAll('button')
+        buttons[0].addEventListener('click', selectAll)
+        buttons[1].addEventListener('click', cancelAll)
+
+        function selectAll() {
+            checkboxs.forEach((box) => {
+                box.checked = true
+            })
+        }
+        function cancelAll() {
+            checkboxs.forEach((box) => {
+                box.checked = false
+            })
+        }
+    </script>
+</body>
+</html>
