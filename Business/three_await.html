@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let 
+        let res1 = async function (){
+            return Promise.reject(1)
+        }
+        let res2 = async function (){
+            return Promise.resolve(2)
+        }
+        let res3 = async function (){
+            return Promise.resolve(3)
+        }
+
+        void async function(){
+            console.log(await res2())
+            console.log(await res1())
+            console.log(await res3())
+        }()
+        
+        
+    </script>
+</body>
+</html>
