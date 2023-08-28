@@ -7,4 +7,18 @@ function myinstanceof(Instance, Constructor) {
     return false
 }
 
-export default myinstanceof
+let arr = [1,2.3]
+
+console.log('myInstanceof', myinstanceof(arr, Object))
+
+function instanceOf(obj, constructor) {
+    return constructor.prototype.isPrototypeOf(obj);
+}
+
+console.log('isPrototypeof', instanceOf(arr, Array))
+
+
+module.exports = {
+    myinstanceof,
+    instanceOf
+}
