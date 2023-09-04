@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pullPeak(str) {
+            let tokens = str.split('-')
+            console.log(tokens)
+            if(tokens[0] === '') tokens.shift()
+            let t1 = Date.now()
+            let n = 1000000
+            while(n--)
+            for(let i = 1; i < tokens.length; i++) {
+                let str = ''
+                str += tokens[i][0].toUpperCase();
+                for(let j = 1; j < tokens[i].length; j++) {
+                    str += tokens[i][j]
+                }
+                tokens[i] = str
+            }
+            let t2 = Date.now()
+            console.log('t1', t2 - t1)
+
+            let t3 = Date.now()
+            n = 1000000
+            while(n--)
+            for(let i = 1; i < tokens.length; i++) {
+                let str = []
+                str.push( tokens[i][0].toUpperCase() );
+                for(let j = 1; j < tokens[i].length; j++) {
+                    str.push( tokens[i][j] )
+                }
+                
+                tokens[i] = str.join('')
+            }
+            let t4 = Date.now()
+            console.log('t2', t4 - t3)
+
+            console.log(tokens)
+            console.log(tokens.join(''))
+        }
+
+        pullPeak('-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf-abc-tian-sjdijf')
+    </script>
+</body>
+</html>
