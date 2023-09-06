@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            margin: auto;
+            border: 2px solid darkgray; 
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid darkgray
+        }
+
+        caption {
+            padding: 10px;
+            caption-side: bottom;
+        }
+    </style>
+</head>
+<body>
+    <table>
+       <thead>
+            <caption>
+                秋招
+            </caption>
+            <tr>
+                <th colspan="5">投递</th>
+            </tr>
+            <tr>
+                <th scope="col">公司</th>
+                <th scope="col">简历</th>
+                <th scope="col">一面</th>
+                <th scope="col">二面</th>
+                <th scope="col">结果</th>
+            </tr>
+       </thead>
+
+       <tbody>
+            <tr>
+                <th scope="row">mihayou</th>
+                <td>on</td>
+                <td>off</td>
+                <td></td>
+                <td>寄</td>
+            </tr>
+
+            <tr>
+                <th scope="row">meituan</th>
+                <td>on</td>
+                <td>on</td>
+                <td>on</td>
+                <td>wenle</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2" scope="row">kuaishou</th>
+                <td>on</td>
+                <td>off</td>
+                <td></td>
+                <td>寄</td>
+            </tr>
+
+            <tr>
+                <td>on</td>
+                <td>off</td>
+                <td></td>
+                <td>寄</td>
+            </tr>
+       </tbody>
+    </table>
+</body>
+</html>
